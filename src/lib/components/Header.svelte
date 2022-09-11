@@ -1,9 +1,12 @@
 <header>
-	<h1>FITCHECK</h1>
+	<h1>FITCHECK</h1>	
 </header>
 
 <style>
 	header {
-		padding: .5rem 1.2rem 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 1.2rem;
 	}
 </style>

@@ -10,7 +10,7 @@
 	section {
 		background-color: var(--color-blue);
 		color: var(--color-white);
-        height: 15rem;
+        height: 12rem;
         font-size: 1.2rem;
         padding: 1.2rem;
         

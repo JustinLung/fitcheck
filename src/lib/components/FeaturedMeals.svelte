@@ -26,6 +26,7 @@
 <style>
 	section {
 		padding: 0 1.2rem;
+		margin-bottom: 7rem;
 	}
 
 	h2 {
@@ -40,5 +41,6 @@
 		overflow-y: auto;
 		overscroll-behavior-x: contain;
 		scroll-snap-type: x mandatory;
+		padding-bottom: 1rem;
 	}
 </style>
