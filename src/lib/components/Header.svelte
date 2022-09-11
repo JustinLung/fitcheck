@@ -1,5 +1,5 @@
 <header>
-	<h1>FITCHECK</h1>	
+	<h1>FITCHECK</h1>
 </header>
 
 <style>

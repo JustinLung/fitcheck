@@ -1,10 +1,11 @@
 <script lang="ts">
 	export let workoutName: string;
 	export let workoutImage: string;
+	export let workoutLink: string;
 	export let workoutTime: number;
 </script>
 
-<section>
+<a href={workoutLink}>
 	<article>
 		<div>
 			<img src={workoutImage} alt={`${workoutName} image`} />
@@ -14,14 +15,14 @@
 			<span>{workoutTime} min</span>
 		</div>
 	</article>
-</section>
+</a>
 
 <style>
 	article {
-		border-radius: .3rem;
+		border-radius: 0.3rem;
 		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-		width: 20rem;
 		scroll-snap-align: center;
+		width: 20rem;
 	}
 
 	div:first-child {
@@ -38,8 +39,8 @@
 	}
 
 	img {
-        border-top-left-radius: .5rem;
-        border-top-right-radius: .5rem;
+		border-top-left-radius: 0.5rem;
+		border-top-right-radius: 0.5rem;
 		width: 100%;
 	}
 

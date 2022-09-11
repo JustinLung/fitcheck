@@ -9,16 +9,19 @@
 			workoutImage="/assets/images/deadlift-image.jpg"
 			workoutName="Pull Workout"
 			workoutTime={60}
+			workoutLink="/"
 		/>
 		<WorkoutCard
 			workoutImage="/assets/images/deadlift-image.jpg"
 			workoutName="Pull Workout"
 			workoutTime={60}
+			workoutLink="/"
 		/>
 		<WorkoutCard
 			workoutImage="/assets/images/deadlift-image.jpg"
 			workoutName="Pull Workout"
 			workoutTime={60}
+			workoutLink="/"
 		/>
 	</div>
 </section>
@@ -26,7 +29,7 @@
 <style>
 	section {
 		padding: 0 1.2rem;
-        margin-bottom: 2rem;
+		margin-bottom: 2rem;
 	}
 
 	h2 {

@@ -9,16 +9,19 @@
 			mealName="Ceasar Salad"
 			mealPrepTime={20}
 			mealImage="/assets/images/ceasar-salad.jpeg"
+			mealLink="/"
 		/>
 		<MealCard
 			mealName="Ceasar Salad"
 			mealPrepTime={20}
 			mealImage="/assets/images/ceasar-salad.jpeg"
+			mealLink="/"
 		/>
 		<MealCard
 			mealName="Ceasar Salad"
 			mealPrepTime={20}
 			mealImage="/assets/images/ceasar-salad.jpeg"
+			mealLink="/"
 		/>
 	</div>
 </section>

@@ -1,10 +1,11 @@
 <script lang="ts">
 	export let mealName: string;
 	export let mealImage: string;
+	export let mealLink: string;
 	export let mealPrepTime: number;
 </script>
 
-<section>
+<a href={mealLink}>
 	<article>
 		<div>
 			<img src={mealImage} alt={`${mealName} image`} />
@@ -14,7 +15,7 @@
 			<span>{mealPrepTime} min</span>
 		</div>
 	</article>
-</section>
+</a>
 
 <style>
 	article {
