@@ -41,5 +41,6 @@
 		overflow-y: auto;
 		overscroll-behavior-x: contain;
 		scroll-snap-type: x mandatory;
+		padding-bottom: 1rem;
 	}
 </style>
