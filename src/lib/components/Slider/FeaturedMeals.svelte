@@ -1,5 +1,5 @@
 <script lang="ts">
-	import MealCard from './MealCard.svelte';
+	import MealCard from '../MealCard.svelte';
 </script>
 
 <section>

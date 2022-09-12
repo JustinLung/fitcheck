@@ -9,7 +9,7 @@
 			workoutImage="/assets/images/deadlift-image.jpg"
 			workoutName="Pull Workout"
 			workoutTime={60}
-			workoutLink="/"
+			workoutLink="/workouts/pull-workout"
 		/>
 		<WorkoutCard
 			workoutImage="/assets/images/deadlift-image.jpg"

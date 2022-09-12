@@ -46,11 +46,11 @@
 		font-size: 0.8em;
 		bottom: -1em;
 		left: 50%;
-		transform: translate(-50%);
+		transform: translateX(-50%);
 	}
 
 	img {
-		width: 2em;
+		width: 1.8em;
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
