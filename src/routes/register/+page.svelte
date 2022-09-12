@@ -1,19 +1,20 @@
 <script lang="ts">
 	let email: string;
 	let password: string;
-	let errorMessage: string;
+	let error: string;
+	let message: string;
 
 	async function handleRegister() {
+		error = '';
 		try {
 			const req = await fetch('/api/signup', {
 				method: 'POST',
 				body: JSON.stringify({ email, password })
 			});
 			const res = await req.json();
-
-			console.log(res);
+			message = 'An email has been sent.';
 		} catch (err) {
-			errorMessage = 'Something went wrong';
+			error = 'Something went wrong';
 		}
 	}
 </script>
@@ -30,8 +31,11 @@
 			<input type="password" name="password" placeholder="*****" bind:value={password} />
 		</div>
 		<input type="submit" />
-		{#if errorMessage}
-			{errorMessage}
+		{#if message}
+			{message}
+		{/if}
+		{#if error}
+			{error}
 		{/if}
 	</form>
 	<p>Already have an account? <a href="/register">Login</a></p>

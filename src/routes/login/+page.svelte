@@ -1,19 +1,23 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
+	let error: string;
 	let email: string;
 	let password: string;
-	let errorMessage: string;
 
 	async function handleLogin() {
-		try {
-			const req = await fetch('/api/signin', {
-				method: 'POST',
-				body: JSON.stringify({ email, password })
-			});
-			const res = await req.json();
+		error = '';
+		const response = await fetch('/api/signin', {
+			method: 'POST',
+			body: JSON.stringify({
+				email,
+				password
+			})
+		});
+
+		if (response.ok) {
 			goto('/');
-		} catch (err) {
-			errorMessage = 'Something went wrong';
+		} else {
+			error = 'Oops... something went wrong.';
 		}
 	}
 </script>
@@ -23,15 +27,15 @@
 	<form method="POST" on:submit|preventDefault={handleLogin}>
 		<div>
 			<label for="email">Email</label>
-			<input type="email" name="email" placeholder="example@mail.com" bind:value={email} />
+			<input type="email" name="email" placeholder="example@mail.com" required bind:value={email} />
 		</div>
 		<div>
 			<label for="password">Password</label>
-			<input type="password" name="password" placeholder="*****" bind:value={password} />
+			<input type="password" name="password" placeholder="*****" required bind:value={password} />
 		</div>
 		<input type="submit" />
-		{#if errorMessage}
-			{errorMessage}
+		{#if error}
+			<p>{error}</p>
 		{/if}
 	</form>
 	<p>Don't have an account yet? <a href="/register">Register</a></p>
