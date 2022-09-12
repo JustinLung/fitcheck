@@ -1,3 +1,3 @@
-import { writable } from 'svelte/store';
+import { writable, type Writable } from 'svelte/store';
 
-export const user = writable(false);
+export const user: Writable<boolean> = writable(false);
