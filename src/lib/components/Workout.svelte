@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ExerciseCard from '$lib/components/ExerciseCard.svelte';
+	import ExerciseCard from '$lib/components/Slider/ExerciseCard.svelte';
 	export let workoutTitle: string;
 </script>
 
@@ -12,11 +12,11 @@
 </section>
 
 <style>
-    h2 {
-        padding: 0;
-        margin: 0;
-    }
-    section {
-        padding: 1.2rem;
-    }
+	h2 {
+		padding: 0;
+		margin: 0;
+	}
+	section {
+		padding: 1.2rem;
+	}
 </style>

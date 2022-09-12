@@ -1,18 +1,18 @@
 <script lang="ts">
-	export let mealName: string;
-	export let mealImage: string;
-	export let mealLink: string;
-	export let mealPrepTime: number;
+	export let name: string;
+	export let image: string;
+	export let link: string;
+	export let time: number;
 </script>
 
-<a href={mealLink}>
+<a href={link}>
 	<article>
 		<div>
-			<img src={mealImage} alt={`${mealName} image`} />
+			<img src={image} alt={`${name} image`} />
 		</div>
 		<div>
-			<h3>{mealName}</h3>
-			<span>{mealPrepTime} min</span>
+			<h3>{name}</h3>
+			<span>{time} min</span>
 		</div>
 	</article>
 </a>
@@ -21,8 +21,8 @@
 	article {
 		border-radius: 0.3rem;
 		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-		width: 90vw;
 		scroll-snap-align: center;
+		width: 90vw;
 	}
 
 	div:first-child {
@@ -42,6 +42,8 @@
 		border-top-left-radius: 0.5rem;
 		border-top-right-radius: 0.5rem;
 		width: 100%;
+		height: 15rem;
+		object-fit: cover;
 	}
 
 	h3 {

@@ -5,6 +5,8 @@
 	import Header from '$lib/components/Header.svelte';
 </script>
 
-<Header/>
-<slot />
+<Header />
+<main>
+	<slot />
+</main>
 <Navigation />
