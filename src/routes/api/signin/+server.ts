@@ -9,7 +9,6 @@ export const POST: RequestHandler = async ({ request }) => {
 	if (errorMessage) {
 		throw error(400, errorMessage.message);
 	}
-	console.log(session);
 
 	return new Response(JSON.stringify(session));
 };

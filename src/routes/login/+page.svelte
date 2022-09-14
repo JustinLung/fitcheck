@@ -1,8 +1,15 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
+import { user } from '$lib/states/user';
+import { supabase } from '$lib/vendors/supabase';
 	let error: string;
 	let email: string;
 	let password: string;
+
+	supabase.auth.onAuthStateChange((event, session) => {
+		if(!session?.user) return	
+		user.set(session.user)
+	});
 
 	async function handleLogin() {
 		error = '';
@@ -15,7 +22,9 @@
 		});
 
 		if (response.ok) {
-			goto('/');
+			// console.log(await response.json())
+			
+			// goto('/');
 		} else {
 			error = 'Oops... something went wrong.';
 		}
