@@ -4,12 +4,14 @@
 	import Navigation from '$lib/components/Navigation.svelte';
 	import Header from '$lib/components/Header.svelte';
 	import PageTransition from '$lib/components/PageTransition.svelte';
-	import { page } from '$app/stores';
+	import type { LayoutData } from './$types';
+
+	export let data: LayoutData;
 </script>
 
 <Header />
 <main>
-	<PageTransition url={$page.url}>
+	<PageTransition url={data.url}>
 		<slot />
 	</PageTransition>
 </main>
