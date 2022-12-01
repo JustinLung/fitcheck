@@ -1,42 +1,15 @@
-<script lang="ts">
-	import { goto } from '$app/navigation';
-	let error: string;
-	let email: string;
-	let password: string;
-
-	async function handleLogin() {
-		error = '';
-		const response = await fetch('/api/signin', {
-			method: 'POST',
-			body: JSON.stringify({
-				email,
-				password
-			})
-		});
-
-		if (response.ok) {
-			goto('/');
-		} else {
-			error = 'Oops... something went wrong.';
-		}
-	}
-</script>
-
 <section>
 	<h2>Login</h2>
-	<form method="POST" on:submit|preventDefault={handleLogin}>
+	<form method="POST" action="?/login">
 		<div>
 			<label for="email">Email</label>
-			<input type="email" name="email" placeholder="example@mail.com" required bind:value={email} />
+			<input type="email" name="email" placeholder="example@mail.com" />
 		</div>
 		<div>
 			<label for="password">Password</label>
-			<input type="password" name="password" placeholder="*****" required bind:value={password} />
+			<input type="password" name="password" placeholder="*****" required />
 		</div>
 		<input type="submit" />
-		{#if error}
-			<p>{error}</p>
-		{/if}
 	</form>
 	<p>Don't have an account yet? <a href="/register">Register</a></p>
 </section>
